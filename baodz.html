@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Special</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            position: relative;
+            display: inline-block;
+        }
+        .btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">m cs yêu t humm</div>
+    <div class="buttons">
+        <button class="btn yes" onclick="sayYes()">Có, t đồng ý</button>
+        <button class="btn no" id="noButton" onmouseover="moveNoButton()">Ko</button>
+    </div>
+    <script>
+        function sayYes() {
+            document.body.innerHTML = '<h1>t bt lâuuuuu rùiii ă</h1>';
+        }
+
+        function moveNoButton() {
+            var button = document.getElementById("noButton");
+            var maxX = window.innerWidth * 0.8;
+            var maxY = window.innerHeight * 0.8;
+            var x = Math.random() * maxX;
+            var y = Math.random() * maxY;
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
